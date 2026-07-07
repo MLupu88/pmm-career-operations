@@ -214,205 +214,132 @@ title_filter:
 
 search_queries:
   # -- Ashby --
-  - name: Ashby — AI PM
-    query: 'site:jobs.ashbyhq.com "AI Product Manager" OR "Senior Product Manager AI" remote'
+  - name: Ashby — Product Marketing (Senior+)
+    query: 'site:jobs.ashbyhq.com ("Product Marketing Manager" OR "Senior Product Marketing Manager" OR "Head of Product Marketing") remote -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Ashby — Solutions Architect
-    query: 'site:jobs.ashbyhq.com "Solutions Architect" AI OR automation remote'
+  - name: Ashby — GTM & Solutions Marketing
+    query: 'site:jobs.ashbyhq.com ("Go-to-Market" OR "GTM" OR "Solutions Marketing") remote -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Ashby — AI Engineer
-    query: 'site:jobs.ashbyhq.com "AI Engineer" OR "LLM Engineer" OR "Forward Deployed" remote'
+  - name: Ashby — Competitive Intelligence & Enablement
+    query: 'site:jobs.ashbyhq.com ("Competitive Intelligence" OR "Sales Enablement" OR "Revenue Enablement") remote -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Ashby — Agentic
-    query: 'site:jobs.ashbyhq.com "Agentic" OR "AI Agent" OR "Automation Architect" remote'
+  - name: Ashby — Product Marketing (Europe/CET/GMT)
+    query: 'site:jobs.ashbyhq.com ("Product Marketing" OR "GTM") (UK OR Germany OR Netherlands OR Spain OR Romania OR EU OR CET OR GMT OR "remote Europe" OR "remote EMEA" OR "based in Europe") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
   # -- Greenhouse --
-  - name: Greenhouse — AI PM
-    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "AI Product Manager" OR "Senior Product Manager" AI remote'
+  - name: Greenhouse — Product Marketing (Senior+)
+    query: '(site:boards.greenhouse.io OR site:job-boards.greenhouse.io) ("Product Marketing Manager" OR "Senior Product Marketing Manager" OR "Director of Product Marketing") remote -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Greenhouse — SA & FDE
-    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Solutions Architect" OR "Forward Deployed" AI remote'
+  - name: Greenhouse — GTM & Solutions Marketing
+    query: '(site:boards.greenhouse.io OR site:job-boards.greenhouse.io) ("Go-to-Market" OR "GTM" OR "Solutions Marketing") remote -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Greenhouse — AI Engineer
-    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "AI Engineer" OR "LLM" OR "Agentic" remote'
+  - name: Greenhouse — Competitive Intelligence & Enablement
+    query: '(site:boards.greenhouse.io OR site:job-boards.greenhouse.io) ("Competitive Intelligence" OR "Sales Enablement" OR "Market Intelligence") remote -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
+    enabled: true
+
+  - name: Greenhouse — Product Marketing (Europe/CET/GMT)
+    query: '(site:boards.greenhouse.io OR site:job-boards.greenhouse.io) ("Product Marketing" OR "GTM") (UK OR Germany OR Netherlands OR Spain OR Romania OR EU OR CET OR GMT OR "remote Europe" OR "remote EMEA" OR "based in Europe") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
   # -- Workable --
-  - name: Workable — AI Roles
-    query: 'site:apply.workable.com "AI" "Product Manager" OR "Solutions Architect" OR "AI Engineer" remote'
+  - name: Workable — Product Marketing & GTM
+    query: 'site:apply.workable.com "AI" ("Product Marketing" OR "GTM" OR "Solutions Marketing") remote -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  # -- No-Code / Low-Code / Automation --
-  - name: Ashby — No-Code & Automation
-    query: 'site:jobs.ashbyhq.com "no-code" OR "low-code" OR "automation engineer" OR "n8n" OR "Make" OR "Airtable" remote senior'
+  # -- Voice AI & Contact Center AI (Product/Solutions Marketing angle) --
+  - name: Voice AI — Product Marketing & Solutions Marketing
+    query: '(site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com) ("Voice AI" OR "Conversational AI") ("Product Marketing" OR "Solutions Marketing" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Greenhouse — No-Code & Automation
-    query: 'site:job-boards.greenhouse.io "no-code" OR "low-code" OR "automation engineer" OR "business systems" senior remote'
-    enabled: true
-
-  - name: GTM Engineer — All portals
-    query: '"GTM Engineer" OR "RevOps Engineer" OR "Growth Engineer" automation Airtable OR Make OR Clay remote'
-    enabled: true
-
-  # -- Voice AI & Conversational AI --
-  - name: Voice AI — FDE & SA
-    query: 'site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com "Voice AI" OR "Conversational AI" OR "Speech" "Solutions" OR "Forward Deployed" OR "Customer Engineer"'
-    enabled: true
-
-  - name: Voice AI — AI Engineer
-    query: 'site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com "Voice" OR "Speech" "AI Engineer" OR "Deployment" OR "Integration"'
-    enabled: true
-
-  # -- Contact Center AI --
-  - name: Contact Center AI — SA & SE
-    query: '"contact center" OR "customer service" "AI" "Solutions Architect" OR "Solutions Engineer" OR "Forward Deployed" remote'
-    enabled: true
-
-  # -- FDE specific (cross-portal) --
-  - name: FDE & Deployed Engineer — All portals
-    query: '"Forward Deployed Engineer" OR "Deployed Engineer" OR "Deployment Engineer" AI site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com OR site:jobs.lever.co'
+  - name: Contact Center AI — Product Marketing & GTM
+    query: '("contact center" OR "customer service") "AI" ("Product Marketing" OR "GTM" OR "Solutions Marketing") remote -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
   # -- Remote-friendly Europe boards --
 
-  - name: Remotive — AI/DevRel/SA/FDE
-    query: 'site:remotive.com "AI Engineer" OR "Developer Advocate" OR "Solutions Architect" OR "Forward Deployed" OR "DevRel" Europe'
+  - name: Remotive — AI/SaaS Product Marketing Europe
+    query: 'site:remotive.com ("Product Marketing" OR "GTM" OR "Solutions Marketing") Europe -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: WeWorkRemotely — AI & DX
-    query: 'site:weworkremotely.com "AI" OR "DevRel" OR "Solutions Engineer" OR "Forward Deployed" OR "Founding Engineer"'
+  - name: WeWorkRemotely — AI/SaaS Product Marketing
+    query: 'site:weworkremotely.com ("Product Marketing" OR "GTM" OR "Go-to-Market") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Working Nomads — AI/DevRel/SA
-    query: 'site:workingnomads.com "AI Engineer" OR "Developer Advocate" OR "Solutions Architect" OR "Forward Deployed"'
+  - name: Working Nomads — AI/SaaS Product Marketing
+    query: 'site:workingnomads.com ("Product Marketing" OR "GTM" OR "Solutions Marketing") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: EU Remote Jobs — AI/DevRel/SA
-    query: 'site:euremotejobs.com "AI" OR "DevRel" OR "Solutions Architect" OR "Forward Deployed" OR "Founding Engineer"'
+  - name: EU Remote Jobs — AI/SaaS Product Marketing
+    query: 'site:euremotejobs.com ("Product Marketing" OR "GTM" OR "Go-to-Market") Europe -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: RemoteOK — AI/DevRel/SA
-    query: 'site:remoteok.com "AI Engineer" OR "Developer Advocate" OR "Solutions Architect" OR "Forward Deployed" OR "Founding Engineer"'
+  - name: RemoteOK — AI/SaaS Product Marketing
+    query: 'site:remoteok.com ("Product Marketing" OR "GTM" OR "Solutions Marketing") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  # -- Specialized AI / Dev-Tools / FDE boards --
+  # -- Specialized AI boards --
 
-  - name: ai-jobs.net — DevRel/SA/FDE
-    query: 'site:ai-jobs.net "Developer Advocate" OR "Solutions Architect" OR "Forward Deployed" OR "DevRel" remote Europe'
+  - name: ai-jobs.net — AI Product Marketing
+    query: 'site:ai-jobs.net ("Product Marketing" OR "AI Product Marketing" OR "GTM") remote Europe -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: ai-jobs.net — Founding/Applied AI
-    query: 'site:ai-jobs.net "Founding Engineer" OR "Applied AI Engineer" OR "Founding" remote'
+  - name: YC Jobs — Product Marketing & GTM
+    query: '(site:ycombinator.com/jobs OR site:workatastartup.com) ("Product Marketing" OR "Go-to-Market" OR "GTM") remote -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: fwddeploy.com — Forward Deployed roles
-    query: 'site:fwddeploy.com "Forward Deployed" OR "Deployed Engineer" remote Europe OR EMEA'
-    enabled: true
-
-  - name: YC Jobs — DevRel/SA/FDE/Founding
-    query: 'site:ycombinator.com/jobs OR site:workatastartup.com "Forward Deployed" OR "Developer Advocate" OR "Founding Engineer" OR "Solutions Architect" remote'
-    enabled: true
-
-  - name: YC Jobs — Applied AI
-    query: 'site:workatastartup.com "Applied AI" OR "AI Engineer" OR "AI Agent" remote Europe'
+  - name: YC Jobs — AI Product Marketing
+    query: 'site:workatastartup.com ("AI Product Marketing" OR "Applied AI") "Marketing" remote Europe -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
   # -- Spanish market specialized (high-value for Madrid/Barcelona-based candidates) --
 
-  - name: Manfred — Tech Senior España
-    query: 'site:getmanfred.com/en/job-offers "Solutions Architect" OR "DevRel" OR "Forward Deployed" OR "AI Engineer" OR "Founding"'
+  - name: Manfred — Product Marketing España
+    query: 'site:getmanfred.com/en/job-offers ("Product Marketing" OR "GTM" OR "Marketing Manager") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Manfred — Remote AI/Senior
-    query: 'site:getmanfred.com "remote" "AI" OR "Senior" OR "Staff" OR "Lead"'
+  - name: Manfred — Remote Product Marketing/Senior
+    query: 'site:getmanfred.com "remote" ("Product Marketing" OR "Senior" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Tecnoempleo — España IT
-    query: 'site:tecnoempleo.com "AI Engineer" OR "Solutions Architect" OR "DevRel" OR "Forward Deployed" OR "Founding Engineer"'
+  - name: Tecnoempleo — España Marketing
+    query: 'site:tecnoempleo.com ("Product Marketing" OR "GTM" OR "Marketing Manager") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Tecnoempleo — Remoto Senior
-    query: 'site:tecnoempleo.com "remoto" OR "remote" Senior "AI" OR "Architect" OR "Lead"'
+  - name: Tecnoempleo — Remoto Senior Marketing
+    query: 'site:tecnoempleo.com ("remoto" OR "remote") Senior ("Marketing" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: JobFluent — Spain startups
-    query: 'site:jobfluent.com Madrid OR Barcelona "AI" OR "Engineer" OR "Solutions" OR "DevRel"'
+  - name: JobFluent — Spain startups Marketing
+    query: 'site:jobfluent.com (Madrid OR Barcelona) ("Product Marketing" OR "Marketing" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Welcome to the Jungle — Spain tech
-    query: 'site:welcometothejungle.com Spain OR Madrid OR Barcelona "AI Engineer" OR "Solutions Architect" OR "DevRel" OR "Forward Deployed"'
-    enabled: true
-
-  # -- DevRel-specific boards --
-
-  - name: DevRelX Jobs
-    query: 'site:devrelx.com/jobs remote OR Europe OR EMEA'
-    enabled: true
-
-  - name: TrueUp — DevRel roles
-    query: 'site:trueup.io/devrel OR site:trueup.io "Developer Advocate" OR "DevRel" remote Europe'
-    enabled: true
-
-  - name: Remote Rocketship — DevRel
-    query: 'site:remoterocketship.com/jobs/developer-relations OR site:remoterocketship.com "DevRel" remote'
-    enabled: true
-
-  - name: DevRel Job board
-    query: 'site:devreljob.com remote OR Europe OR EMEA'
+  - name: Welcome to the Jungle — Spain Product Marketing
+    query: 'site:welcometothejungle.com (Spain OR Madrid OR Barcelona) ("Product Marketing" OR "GTM" OR "Marketing Manager") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
   # -- European / global aggregators --
 
-  - name: Himalayas — Remote AI/Dev-tools
-    query: 'site:himalayas.app "AI Engineer" OR "Solutions Architect" OR "Developer Advocate" OR "Forward Deployed" OR "Founding Engineer" Europe'
+  - name: Himalayas — Remote Product Marketing/GTM Europe
+    query: 'site:himalayas.app ("Product Marketing" OR "GTM" OR "Go-to-Market") Europe -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: Jooble — España Tech Senior
-    query: 'site:jooble.org "AI Engineer" OR "Solutions Architect" OR "DevRel" Madrid OR remote España'
+  - name: Jooble — España Product Marketing Senior
+    query: 'site:jooble.org ("Product Marketing" OR "GTM") (Madrid OR remote OR España) -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: EU Data Jobs — AI/ML Europe
-    query: 'site:eudatajobs.com "AI" OR "ML" OR "Data" "Engineer" OR "Architect" remote Europe'
+  - name: EU Data Jobs — AI Product Marketing Europe
+    query: 'site:eudatajobs.com "AI" ("Product Marketing" OR "GTM") remote Europe -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
 
-  - name: HN Who's Hiring — Remote AI
-    query: 'site:news.ycombinator.com OR site:hnrss.org "AI Engineer" OR "Forward Deployed" OR "DevRel" OR "Founding Engineer" remote'
+  - name: HN Who's Hiring — Remote Product Marketing/GTM
+    query: '(site:news.ycombinator.com OR site:hnrss.org) ("Product Marketing" OR "GTM" OR "Go-to-Market") remote -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate" -"customer success" -"project manager" -operations -"account executive" -communications -brand -event'
     enabled: true
-
-  # -- Türkiye / Turkey job portals --
-  # WebSearch queries for Turkish job boards (no public ATS APIs).
-  # [CUSTOMIZE] Replace keywords with your target roles in Turkish.
-
-  - name: Kariyer.net — Backend / Software Engineer
-    query: 'site:kariyer.net "Backend Developer" OR "Software Engineer" OR "Yazılım Geliştirici" OR "Backend Geliştirici" Ankara OR Istanbul OR uzaktan'
-    enabled: false
-
-  - name: Kariyer.net — Frontend Engineer
-    query: 'site:kariyer.net "Frontend Developer" OR "React Developer" OR "Frontend Geliştirici" Ankara OR Istanbul OR uzaktan'
-    enabled: false
-
-  - name: Yenibiris.com — Software Engineer
-    query: 'site:yenibiris.com "Software Engineer" OR "Backend Developer" OR "Frontend Developer" OR "Yazılım Geliştirici"'
-    enabled: false
-
-  - name: Secretcv.com — Tech Roles
-    query: 'site:secretcv.com "Software Engineer" OR "Backend" OR "Frontend" OR "Full Stack"'
-    enabled: false
-
-  - name: İşin Olsun — Startup / Tech
-    query: 'site:isinolsun.com "Yazılım" OR "Software" OR "Backend" OR "Frontend" OR "Full Stack"'
-    enabled: false
-
-  - name: LinkedIn — Turkey Tech Roles
-    query: 'site:linkedin.com/jobs "Software Engineer" OR "Backend Engineer" OR "Frontend Engineer" Turkey OR Türkiye OR Ankara OR Istanbul'
-    enabled: false
 
 # -- Tracked companies --
 # Companies whose career pages are checked directly.
@@ -717,7 +644,7 @@ tracked_companies:
   - name: OpenAI
     careers_url: https://openai.com/careers
     scan_method: websearch
-    scan_query: 'site:openai.com/careers "Solutions" OR "Forward Deployed" OR "AI Engineer"'
+    scan_query: 'site:openai.com/careers ("Product Marketing" OR "GTM" OR "Go-to-Market") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     enabled: true
 
   # -- Voice AI & Conversational AI --
@@ -756,7 +683,7 @@ tracked_companies:
   - name: Deepgram
     careers_url: https://jobs.ashbyhq.com/deepgram
     scan_method: websearch
-    scan_query: 'site:deepgram.com/careers OR "deepgram" "Solutions" OR "AI Engineer" site:jobs.ashbyhq.com'
+    scan_query: '(site:deepgram.com/careers OR site:jobs.ashbyhq.com/deepgram) ("Product Marketing" OR "GTM" OR "Solutions Marketing") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "STT/TTS APIs."
     enabled: true
 
@@ -774,13 +701,13 @@ tracked_companies:
     notes: "Voice phone agents. $65M Series B."
     enabled: true
 
-  # -- AI-native platforms (FDE/SA teams) --
+  # -- AI-native platforms --
 
   - name: Retool
     careers_url: https://retool.com/careers
     scan_method: websearch
-    scan_query: 'site:retool.com/careers "Deployed" OR "AI" OR "Solutions"'
-    notes: "London. Popularized Deployed Engineer role."
+    scan_query: 'site:retool.com/careers ("Product Marketing" OR "GTM" OR "Solutions Marketing") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
+    notes: "London. Low-code + AI platform; enterprise GTM motion."
     enabled: true
 
   - name: Airtable
@@ -830,28 +757,28 @@ tracked_companies:
   - name: Ada
     careers_url: https://job-boards.greenhouse.io/ada
     scan_method: websearch
-    scan_query: '"ada.cx" OR "ada" "AI" "Solutions" OR "Engineer" site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io'
+    scan_query: '("ada.cx" OR "ada") "AI" ("Product Marketing" OR "GTM" OR "Solutions Marketing") (site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io) -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Toronto + remote. AI customer service."
     enabled: true
 
   - name: LivePerson
     careers_url: https://liveperson.com/company/careers
     scan_method: websearch
-    scan_query: 'site:liveperson.com/careers OR "liveperson" "Solutions" OR "AI" site:job-boards.greenhouse.io'
+    scan_query: '(site:liveperson.com/careers OR "liveperson") ("Product Marketing" OR "GTM" OR "AI") site:job-boards.greenhouse.io -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Remote EMEA. Conversational AI enterprise."
     enabled: true
 
   - name: Sierra
     careers_url: https://jobs.ashbyhq.com/sierra
     scan_method: websearch
-    scan_query: '"sierra.ai" "AI" "Forward Deployed" OR "Applied" OR "Solutions" site:jobs.ashbyhq.com'
+    scan_query: '"sierra.ai" "AI" ("Product Marketing" OR "GTM" OR "Solutions Marketing") site:jobs.ashbyhq.com -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Bret Taylor (ex-CEO Salesforce). AI customer agents."
     enabled: true
 
   - name: Decagon
     careers_url: https://jobs.ashbyhq.com/decagon
     scan_method: websearch
-    scan_query: '"decagon" "AI" "Forward Deployed" OR "Solutions" site:jobs.ashbyhq.com'
+    scan_query: '"decagon" "AI" ("Product Marketing" OR "GTM" OR "Solutions Marketing") site:jobs.ashbyhq.com -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "AI customer support agents."
     enabled: true
 
@@ -860,42 +787,42 @@ tracked_companies:
   - name: Talkdesk
     careers_url: https://www.talkdesk.com/careers
     scan_method: websearch
-    scan_query: 'site:talkdesk.com/careers "AI" OR "Solutions Architect" OR "AI Engineer"'
+    scan_query: 'site:talkdesk.com/careers "AI" ("Product Marketing" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Lisbon. Contact center AI. EMEA friendly."
     enabled: true
 
   - name: Twilio
     careers_url: https://www.twilio.com/en-us/company/jobs
     scan_method: websearch
-    scan_query: 'site:twilio.com/company/jobs "AI" OR "Voice" "Solutions" OR "Architect"'
+    scan_query: 'site:twilio.com/company/jobs ("AI" OR "Voice") ("Product Marketing" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Voice/messaging infrastructure."
     enabled: true
 
   - name: Dialpad
     careers_url: https://www.dialpad.com/careers
     scan_method: websearch
-    scan_query: '"dialpad" "AI" "Solutions" OR "Engineer" site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com'
+    scan_query: '"dialpad" "AI" ("Product Marketing" OR "GTM") (site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com) -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Voice AI for business comms."
     enabled: true
 
   - name: Gong
     careers_url: https://www.gong.io/careers
     scan_method: websearch
-    scan_query: 'site:gong.io/careers "AI" OR "Solutions" OR "Architect"'
+    scan_query: 'site:gong.io/careers ("Product Marketing" OR "Competitive Intelligence" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Revenue intelligence with voice AI."
     enabled: true
 
   - name: Genesys
     careers_url: https://www.genesys.com/careers
     scan_method: websearch
-    scan_query: 'site:genesys.com/careers "AI" "Solutions Architect" OR "AI Engineer"'
+    scan_query: 'site:genesys.com/careers "AI" ("Product Marketing" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Contact center cloud + AI."
     enabled: true
 
   - name: Salesforce
     careers_url: https://careers.salesforce.com
     scan_method: websearch
-    scan_query: 'site:careers.salesforce.com "Forward Deployed" OR "AI Engineer" OR "Agentforce"'
+    scan_query: 'site:careers.salesforce.com ("Product Marketing" OR "GTM" OR "Agentforce") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Agentforce = AI agents platform."
     enabled: true
 
@@ -904,21 +831,21 @@ tracked_companies:
   - name: Langfuse
     careers_url: https://langfuse.com/careers
     scan_method: websearch
-    scan_query: '"langfuse" careers OR jobs "engineer" OR "solutions"'
+    scan_query: '"langfuse" (careers OR jobs) ("Product Marketing" OR "GTM" OR "Marketing") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Berlin. LLMOps / observability."
     enabled: true
 
   - name: Lindy
     careers_url: https://jobs.ashbyhq.com/lindy
     scan_method: websearch
-    scan_query: '"lindy.ai" "AI" "Forward Deployed" OR "Solutions" site:jobs.ashbyhq.com'
+    scan_query: '"lindy.ai" "AI" ("Product Marketing" OR "GTM") site:jobs.ashbyhq.com -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "AI agent management platform."
     enabled: true
 
   - name: Cognigy
     careers_url: https://careers.cognigy.com
     scan_method: websearch
-    scan_query: '"cognigy" careers "AI" OR "Solutions" OR "Engineer"'
+    scan_query: '"cognigy" careers ("Product Marketing" OR "GTM" OR "AI") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Dusseldorf EMEA. Conversational AI enterprise."
     enabled: true
 
@@ -947,7 +874,7 @@ tracked_companies:
   - name: Make.com (Celonis)
     careers_url: https://www.make.com/en/careers
     scan_method: websearch
-    scan_query: 'site:make.com/en/careers OR "make.com" "engineer" OR "solutions" site:jobs.ashbyhq.com'
+    scan_query: '(site:make.com/en/careers OR "make.com") ("Product Marketing" OR "GTM") site:jobs.ashbyhq.com -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Celonis parent company. Automation platform."
     enabled: true
 
@@ -1163,7 +1090,7 @@ tracked_companies:
     careers_url: https://jobs.ashbyhq.com/lakera.ai
     scan_method: websearch
     scan_query: 'site:jobs.ashbyhq.com/lakera.ai'
-    notes: "Zurich CH / SF. AI security & guardrails. Has Forward Deployed Engineer roles."
+    notes: "Zurich CH / SF. AI security & guardrails, enterprise GTM."
     enabled: true
 
   - name: Scandit
@@ -1313,14 +1240,14 @@ tracked_companies:
   - name: Perplexity
     careers_url: https://jobs.ashbyhq.com/perplexity
     scan_method: websearch
-    scan_query: ‘site:jobs.ashbyhq.com/perplexity "AI" OR "Applied AI" OR "Forward Deployed" OR "Engineer"’
+    scan_query: 'site:jobs.ashbyhq.com/perplexity ("Product Marketing" OR "AI Product Marketing" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "AI-native search and enterprise AI platform."
     enabled: true
 
   - name: Clay Labs
     careers_url: https://jobs.ashbyhq.com/claylabs
     scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/claylabs "AI" OR "Developer Experience" OR "Growth" OR "Engineer"'
+    scan_query: 'site:jobs.ashbyhq.com/claylabs "AI" ("Product Marketing" OR "Growth Marketing" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "AI-native GTM and workflow automation platform."
     enabled: true
 
@@ -1339,11 +1266,11 @@ tracked_companies:
   - name: WorkOS
     careers_url: https://jobs.ashbyhq.com/workos
     scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/workos "Solutions Engineer" OR "Developer Success" OR "Engineer"'
+    scan_query: 'site:jobs.ashbyhq.com/workos ("Product Marketing" OR "GTM" OR "Solutions Marketing") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "Developer tools and enterprise-ready auth/platform APIs."
     enabled: true
 
-  # -- Dev Tools / AI Infra (DevRel, SA, FDE focus) --
+  # -- Dev Tools / AI Infra --
 
   - name: Supabase
     careers_url: https://jobs.ashbyhq.com/supabase
@@ -1382,147 +1309,16 @@ tracked_companies:
   - name: Zep AI
     careers_url: https://www.getzep.com/careers
     scan_method: websearch
-    scan_query: '"Zep" "Forward Deployed" OR "Developer Relations" OR "Founding" site:workatastartup.com OR site:getzep.com'
-    notes: "Context engineering platform for AI agents. YC W24. Lead FDE + DevRel Lead roles. US-only currently."
+    scan_query: '"Zep" ("Product Marketing" OR "GTM" OR "Developer Marketing") (site:workatastartup.com OR site:getzep.com) -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
+    notes: "Context engineering platform for AI agents. YC W24. US-only currently."
     enabled: true
 
   - name: Maxim AI
     careers_url: https://www.getmaxim.ai/careers
     scan_method: websearch
-    scan_query: '"Maxim AI" OR "getmaxim" careers "engineer" OR "product"'
+    scan_query: '("Maxim AI" OR "getmaxim") careers ("Product Marketing" OR "Marketing" OR "GTM") -content -writer -copywriter -social -designer -recruiter -SDR -BDR -engineer -developer -DevRel -"developer advocate"'
     notes: "AI evaluation and observability platform. Bangalore-based, mostly on-site."
     enabled: true
-
-  # ============================================================
-  # -- Türkiye / Turkey market
-  # ============================================================
-  # Tech companies for candidates targeting the Turkish market or
-  # Turkish-language postings. Job-portal search queries (Kariyer.net,
-  # Yenibiris.com, Secretcv, İşin Olsun, LinkedIn-TR) live in the
-  # `search_queries:` section above — that's where the scanner picks
-  # them up.
-  #
-  # NOTE on scanning: Most Turkish companies below do NOT expose a
-  # public ATS API (Greenhouse / Lever / Ashby) on their careers_url,
-  # so `scan.mjs` will filter them out automatically (it requires a
-  # detectable ATS). They are listed here as discovery aids — paste
-  # the URL of any specific role into `data/pipeline.md` and run
-  # `/career-ops pipeline`, which uses Playwright/WebFetch instead.
-  # Only Getir (jobs.lever.co/getir) is currently scannable.
-  #
-  # Key Turkish market notes:
-  #   - Salaries often quoted as NET (after tax/SGK deductions)
-  #   - Common benefits: yemek kartı (meal card), özel sağlık sigortası
-  #     (private health insurance), servis (company shuttle)
-  #   - Probation (deneme süresi): max 2 months by law
-  #   - Severance (kıdem tazminatı): 1 month per year of service
-  #   - Use modes/tr/ for Turkish-language evaluations and applications
-  # ============================================================
-
-  - name: Trendyol
-    careers_url: https://www.trendyol.com/kariyerimiz
-    scan_method: websearch
-    scan_query: 'site:trendyol.com/kariyerimiz OR "trendyol" "Software Engineer" OR "Backend" OR "Frontend" careers'
-    notes: "Istanbul (Maslak tech HQ). Turkey's largest e-commerce platform (Alibaba-owned). Large tech org, competitive salaries."
-    enabled: false
-
-  - name: Hepsiburada
-    careers_url: https://www.hepsiburada.com/kariyer
-    scan_method: websearch
-    scan_query: '"hepsiburada" careers "Software Engineer" OR "Backend" OR "Frontend" OR "Yazılım"'
-    notes: "Istanbul. Major Turkish e-commerce platform. Listed on NASDAQ."
-    enabled: false
-
-  - name: Getir
-    careers_url: https://jobs.lever.co/getir
-    scan_method: websearch
-    scan_query: 'site:jobs.lever.co/getir OR "getir" careers "Software Engineer" OR "Backend" OR "Frontend"'
-    notes: "Istanbul. Ultra-fast delivery unicorn. Exited international markets in April 2024; now Turkey-only."
-    enabled: false
-
-  - name: Insider
-    careers_url: https://useinsider.com/careers
-    scan_method: websearch
-    scan_query: '"useinsider" OR "insider" careers "Software Engineer" OR "Backend" OR "Frontend" site:jobs.lever.co OR site:jobs.ashbyhq.com'
-    notes: "Istanbul. B2B SaaS marketing platform. Unicorn. Strong remote-friendly culture."
-    enabled: false
-
-  - name: Dream Games
-    careers_url: https://www.dreamgames.com/careers
-    scan_method: websearch
-    scan_query: '"dreamgames" OR "dream games" careers "Software Engineer" OR "Backend" OR "Frontend"'
-    notes: "Istanbul. Mobile gaming company (Royal Match). Strong engineering culture, competitive pay."
-    enabled: false
-
-  - name: Peak Games (Zynga)
-    careers_url: https://www.peakgames.net/en/career
-    scan_method: websearch
-    scan_query: '"peak games" careers "Software Engineer" OR "Backend" OR "Frontend"'
-    notes: "Istanbul. Mobile gaming studio acquired by Zynga. Strong tech team."
-    enabled: false
-
-  - name: Yemeksepeti (Delivery Hero)
-    careers_url: https://www.yemeksepeti.com/kariyer
-    scan_method: websearch
-    scan_query: '"yemeksepeti" careers "Software Engineer" OR "Backend" OR "Frontend" OR "Yazılım"'
-    notes: "Istanbul. Food delivery platform (Delivery Hero subsidiary). Large tech team."
-    enabled: false
-
-  - name: Sahibinden.com
-    careers_url: https://www.sahibinden.com/kariyer
-    scan_method: websearch
-    scan_query: '"sahibinden" careers "Software Engineer" OR "Backend" OR "Frontend" OR "Yazılım Geliştirici"'
-    notes: "Istanbul. Turkey's largest classifieds platform. Established tech org."
-    enabled: false
-
-  - name: Garanti BBVA Technology
-    careers_url: https://www.garantibbvateknoloji.com.tr/kariyer
-    scan_method: websearch
-    scan_query: '"garanti bbva teknoloji" OR "garantibbvateknoloji" careers "Software Engineer" OR "Backend" OR "Frontend"'
-    notes: "Istanbul. Fintech/banking tech arm of Garanti BBVA. Large engineering org, competitive benefits."
-    enabled: false
-
-  - name: Akbank Tech
-    careers_url: https://www.akbank.com/tr-tr/sayfalar/kariyer.aspx
-    scan_method: websearch
-    scan_query: '"akbank" careers "Software Engineer" OR "Yazılım Mühendisi" OR "Backend" OR "Frontend"'
-    notes: "Istanbul. Turkish bank with large in-house tech team."
-    enabled: false
-
-  - name: Turkcell
-    careers_url: https://kariyer.turkcell.com.tr
-    scan_method: websearch
-    scan_query: 'site:kariyer.turkcell.com.tr OR "turkcell" careers "Software Engineer" OR "Backend" OR "Frontend"'
-    notes: "Istanbul. Turkey's largest telecom. Large digital and tech transformation team."
-    enabled: false
-
-  - name: Iyzico (PayU)
-    careers_url: https://iyzico.com/kariyer
-    scan_method: websearch
-    scan_query: '"iyzico" careers "Software Engineer" OR "Backend" OR "Frontend" OR "Yazılım"'
-    notes: "Istanbul. Fintech / payment infrastructure (PayU subsidiary). Good engineering culture."
-    enabled: false
-
-  - name: Papara
-    careers_url: https://papara.com/kariyer
-    scan_method: websearch
-    scan_query: '"papara" careers "Software Engineer" OR "Backend" OR "Frontend"'
-    notes: "Istanbul. Turkish fintech / digital wallet. Fast-growing, unicorn valuation."
-    enabled: false
-
-  - name: Craftgate
-    careers_url: https://craftgate.io/career
-    scan_method: websearch
-    scan_query: '"craftgate" careers "Software Engineer" OR "Backend" OR "Frontend"'
-    notes: "Istanbul. Payment orchestration platform. Strong engineering-first culture."
-    enabled: false
-
-  - name: n11.com (Doğuş)
-    careers_url: https://www.n11.com/kurumsal/kariyer
-    scan_method: websearch
-    scan_query: '"n11" careers "Software Engineer" OR "Backend" OR "Frontend" OR "Yazılım"'
-    notes: "Istanbul. E-commerce marketplace (Doğuş Group)."
-    enabled: false
 
 # ── Job Boards ────────────────────────────────────────────────────────
 # Multi-employer aggregators. Unlike tracked_companies (one entry = one employer),
@@ -1605,7 +1401,7 @@ job_boards:
     provider: jobstreet
     api: https://id.jobstreet.com/api/jobsearch/v5/search
     siteKey: ID-Main
-    searchKeywords: "data scientist"
+    searchKeywords: "Product Marketing"
     searchLocation: "Jakarta"
     pageSize: 30
     maxPages: 3
@@ -1615,7 +1411,7 @@ job_boards:
   - name: Glints Indonesia
     provider: glints
     api: https://glints.com/api/v2-alc/graphql       # searchJobsV3 endpoint
-    searchKeywords: "data scientist"
+    searchKeywords: "Product Marketing"
     countryCode: ID
     pageSize: 30
     maxPages: 3
