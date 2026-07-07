@@ -67,45 +67,47 @@ Aplicación durante la evaluación A-G:
 
 Read `cv.md`. Ejecuta TODOS los bloques:
 
-#### Paso 0 — Detección de Arquetipo
+#### Step 0 — Archetype Detection
 
-Clasifica la oferta en uno de los 6 arquetipos. Si es híbrido, indica los 2 más cercanos.
+Classify the offer into one of the 6 archetypes. If hybrid, indicate the 2 closest ones.
 
-**Los 6 arquetipos (todos igual de válidos):**
+**The 6 archetypes (all equally valid):**
 
-| Arquetipo | Ejes temáticos | Qué compran |
+| Archetype | Thematic axes | What they buy |
 |-----------|----------------|-------------|
-| **AI Platform / LLMOps Engineer** | Evaluation, observability, reliability, pipelines | Alguien que ponga AI en producción con métricas |
-| **Agentic Workflows / Automation** | HITL, tooling, orchestration, multi-agent | Alguien que construya sistemas de agentes fiables |
-| **Technical AI Product Manager** | GenAI/Agents, PRDs, discovery, delivery | Alguien que traduzca negocio → producto AI |
-| **AI Solutions Architect** | Hyperautomation, enterprise, integrations | Alguien que diseñe arquitecturas AI end-to-end |
-| **AI Forward Deployed Engineer** | Client-facing, fast delivery, prototyping | Alguien que entregue soluciones AI a clientes rápido |
-| **AI Transformation Lead** | Change management, adoption, org enablement | Alguien que lidere el cambio AI en una organización |
+| **Product Marketing Manager (Core)** | Positioning, messaging, launches, buyer personas | Someone who turns product into market-winning narrative |
+| **GTM / Growth Marketing** | Go-to-market strategy, demand funnel, pipeline, activation | Someone who orchestrates the full launch-to-revenue motion |
+| **Solutions / Vertical Marketing** | ICP, verticals, use cases, segmentation | Someone who adapts the message to specific industries and buyers |
+| **Competitive Intelligence** | Battlecards, win/loss, market intelligence | Someone who arms sales with a competitive edge |
+| **Sales Enablement** | Playbooks, field training, ramp, adoption | Someone who makes sure the message actually gets executed by sales |
+| **Platform / Partner / Marketplace** | Ecosystem, integrations, marketplace listings | Someone who grows the business through partners and platform |
 
-**Framing adaptativo:**
+**Adaptive framing:**
 
-> **Las métricas concretas se leen de `cv.md` + `article-digest.md` en cada evaluación. NUNCA hardcodear números aquí.**
+> **Concrete metrics are read from `cv.md` + `article-digest.md` at evaluation time. NEVER hardcode numbers here.**
 
-| Si el rol es... | Emphasize about the candidate... | Fuentes de proof points |
+| If the role is... | Emphasize about the candidate... | Proof point sources |
 |-----------------|--------------------------|--------------------------|
-| Platform / LLMOps | Builder de sistemas en producción, observability, evals, closed-loop | article-digest.md + cv.md |
-| Agentic / Automation | Orquestación multi-agente, HITL, reliability, cost | article-digest.md + cv.md |
-| Technical AI PM | Product discovery, PRDs, métricas, stakeholder mgmt | cv.md + article-digest.md |
-| Solutions Architect | Diseño de sistemas, integrations, enterprise-ready | article-digest.md + cv.md |
-| Forward Deployed Engineer | Fast delivery, client-facing, prototype → prod | cv.md + article-digest.md |
-| AI Transformation Lead | Change management, team enablement, adoption | cv.md + article-digest.md |
+| Product Marketing Manager (Core) | Positioning and messaging frameworks, launches shipped, narrative ownership | article-digest.md + cv.md |
+| GTM / Growth Marketing | Funnel/pipeline ownership, cross-functional GTM orchestration | article-digest.md + cv.md |
+| Solutions / Vertical Marketing | ICP definition, vertical narratives, use cases | cv.md + article-digest.md |
+| Competitive Intelligence | Battlecards, win/loss analysis, market intelligence rigor | article-digest.md + cv.md |
+| Sales Enablement | Field adoption, ramp-time reduction, enablement metrics | cv.md + article-digest.md |
+| Platform / Partner / Marketplace | Partner/ecosystem outcomes, marketplace traction | cv.md + article-digest.md |
 
-**Ventaja transversal**: Enmarcar perfil como **"Technical builder"** que adapta su framing al rol:
-- Para PM: "builder que reduce incertidumbre con prototipos y luego productioniza con disciplina"
-- Para FDE: "builder que entrega fast con observability y métricas desde día 1"
-- Para SA: "builder que diseña sistemas end-to-end con experiencia real en integrations"
-- Para LLMOps: "builder que pone AI en producción con closed-loop quality systems — leer métricas de article-digest.md"
+**Cross-cutting advantage**: Frame the profile as **"the PMM who turns complex product into messages that sell"** and adapt the framing per role:
+- For PMM Core: "storyteller who ships launches and moves the adoption needle — read metrics from article-digest.md"
+- For GTM: "go-to-market orchestrator who connects product, sales, and demand gen"
+- For Solutions/Vertical: "translator of product into industry- and buyer-specific language"
+- For Competitive Intelligence: "analyst who builds winning arguments against the competition"
+- For Sales Enablement: "the bridge between marketing and sales who makes the message land in the field"
+- For Platform/Partner/Marketplace: "growth builder through partners and ecosystem"
 
-Convertir "builder" en señal profesional, no en "hobby maker". El framing cambia, la verdad es la misma.
+Turn "PMM" into a professional signal, not a "content producer" one. The framing changes, the truth stays the same.
 
-#### Bloque A — Resumen del Rol
+#### Block A — Role Summary
 
-Tabla con: Arquetipo detectado, Domain, Function, Seniority, Remote, Team size, TL;DR.
+Table with: Archetype detected, Domain, Function, Seniority, Remote, Team size, TL;DR.
 
 #### Bloque B — Match con CV
 
