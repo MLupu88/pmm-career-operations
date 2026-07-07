@@ -39,12 +39,27 @@ Classify the job into one of the 6 archetypes (see `_shared.md`). If it is a hyb
 
 Table with:
 - Archetype detected
-- Domain (platform/agentic/LLMOps/ML/enterprise)
-- Function (build/consult/manage/deploy)
+- Domain (core-PMM/GTM/solutions-vertical/competitive-intel/sales-enablement/platform-partner)
+- Function (position/launch/enable/differentiate)
 - Seniority
 - Remote (full/hybrid/onsite)
 - Team size (if mentioned)
 - TL;DR in 1 sentence
+
+### Company & Market Context
+
+Alongside the table above, capture these signals — they determine whether the role is strategic ownership or content production, and whether the company's GTM function is mature enough to support the archetype detected:
+
+| Signal | What to look for |
+|--------|-------------------|
+| Market category | Is this an established category, an emerging one, or is the company trying to create a new one? |
+| Product complexity | Simple/prosumer product, or complex/technical (multi-persona buyer, long sales cycle)? |
+| GTM maturity | Early-stage (founder-led sales, no playbooks) vs scaled (dedicated enablement, mature funnel)? |
+| AI relevance | Is AI core to the product/positioning, a feature bolt-on, or irrelevant? Matters for "AI/SaaS Product Marketing" framing |
+| Competitive intensity | Crowded category with named competitors, or first-mover with little direct competition? |
+| Strategic vs. content-production scope | Does the JD describe ownership of positioning/strategy, or is it primarily content/campaign execution reporting into someone else's strategy? |
+
+Use these to calibrate Block C (level/strategy) and Block D (comp/demand) — a "PMM" title at a company with immature GTM and a content-production scope should be flagged as such, not scored as if it were a strategic-ownership role.
 
 ### Geo-mismatch check
 
@@ -66,12 +81,12 @@ The flag is an additive line only — Block B's existing content stays unchanged
 Read `cv.md`. Create a table with each JD requirement mapped to exact lines in the CV.
 
 **Adapted to the archetype:**
-- If FDE → prioritize delivery speed and client-facing proof points
-- If SA → prioritize system design and integrations
-- If PM → prioritize product discovery and metrics
-- If LLMOps → prioritize evals, observability, pipelines
-- If Agentic → prioritize multi-agent, HITL, orchestration
-- If Transformation → prioritize change management, adoption, scaling
+- If Product Marketing Manager (Core) → prioritize positioning, messaging frameworks, launches shipped
+- If GTM / Growth Marketing → prioritize funnel/pipeline ownership, cross-functional GTM orchestration
+- If Solutions / Vertical Marketing → prioritize ICP definition, vertical narratives, use-case proof points
+- If Competitive Intelligence → prioritize battlecards, win/loss analysis, market intelligence rigor
+- If Sales Enablement → prioritize enablement content, field training, sales adoption metrics
+- If Platform / Partner / Marketplace → prioritize ecosystem partnerships, marketplace listings, integration marketing
 
 **Gaps** section with mitigation strategy for each. For each gap:
 1. Is it a hard blocker or a nice-to-have?
@@ -115,12 +130,12 @@ The **Reflection** column captures what was learned or what would be done differ
 **Story Bank:** If `interview-prep/story-bank.md` exists, check if any of these stories are already there. If not, append new ones. Over time this builds a reusable bank of 5-10 master stories that can be adapted to any interview question.
 
 **Selected and framed according to the archetype:**
-- FDE → emphasize delivery speed and client-facing
-- SA → emphasize architectural decisions
-- PM → emphasize discovery and trade-offs
-- LLMOps → emphasize metrics, evals, production hardening
-- Agentic → emphasize orchestration, error handling, HITL
-- Transformation → emphasize adoption, organizational change
+- Product Marketing Manager (Core) → emphasize launches shipped, messaging frameworks, positioning decisions
+- GTM / Growth Marketing → emphasize funnel/pipeline outcomes, cross-functional GTM orchestration
+- Solutions / Vertical Marketing → emphasize ICP/segment wins, vertical-specific proof points
+- Competitive Intelligence → emphasize competitive wins, battlecard adoption, win/loss insight
+- Sales Enablement → emphasize field adoption, ramp-time reduction, enablement metrics
+- Platform / Partner / Marketplace → emphasize partner/ecosystem outcomes, marketplace traction
 
 Also include:
 - 1 recommended case study (which of their projects to present and how)
