@@ -1,452 +1,977 @@
-# Career-Ops
-
-[English](README.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Français](README.fr.md) | [Português (Brasil)](README.pt-BR.md) | [한국어](README.ko-KR.md) | [日本語](README.ja.md) | [简体中文](README.cn.md) | [繁體中文](README.zh-TW.md) | [Українська](README.ua.md) | [Русский](README.ru.md) | [Polski](README.pl.md) | [Dansk](README.da.md) | [العربية](README.ar.md)
+# PMM/GTM Career Intelligence Pipeline
 
 <p align="center">
-  <a href="https://x.com/santifer"><img src="docs/hero-banner.jpg" alt="Career-Ops Multi-Agent Job Search System" width="800"></a>
+  <img alt="PMM/GTM Career Intelligence" src="https://img.shields.io/badge/PMM%2FGTM-Career%20Intelligence-111827?style=for-the-badge">
+  <img alt="Signal Qualification" src="https://img.shields.io/badge/Signal-Qualification-2563EB?style=for-the-badge">
+  <img alt="Human in the Loop" src="https://img.shields.io/badge/Human--in--the--Loop-16A34A?style=for-the-badge">
+  <img alt="Not a mass apply bot" src="https://img.shields.io/badge/Mass--Apply%20Bot-No-DC2626?style=for-the-badge">
 </p>
 
 <p align="center">
-  <em>I spent months applying to jobs the hard way. So I engineered the system I wish I had.</em><br>
-  Companies use AI to filter candidates. <strong>I just gave candidates AI to <em>choose</em> companies.</strong><br>
-  <em>Now it's open source.</em>
+  <strong>A career intelligence pipeline for Product Marketing and Go-to-Market roles.</strong><br>
+  Built to filter noisy opportunities, qualify fit, and protect time before an application ever starts.
 </p>
 
 <p align="center">
-  <a href="https://trendshift.io/repositories/25195" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/25195" alt="santifer%2Fcareer-ops | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-</p>
-
-<p align="center">
-  <a href="https://www.producthunt.com/products/santifer-io?utm_source=badge-featured&utm_medium=badge" target="_blank" rel="noopener noreferrer"><img src="docs/press/producthunt.svg" alt="Career-Ops on Claude | Product Hunt" style="width: 206px; height: 54px; vertical-align: middle;" width="206" height="54"/></a>
-</p>
-
-<p align="center"><sub>FEATURED IN</sub></p>
-
-<p align="center">
-  <a href="https://wired.com.gr/article/to-ai-ergaleio-pou-fernei-epanastasi-ston-tropo-pou-psachnoume-douleia/" rel="noopener noreferrer nofollow"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/press/wired-dark.svg"><img src="docs/press/wired.svg" alt="WIRED" height="32"></picture></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://www.businessinsider.com/how-i-built-tool-filter-job-listings-landed-head-ai-2026-4" rel="noopener noreferrer nofollow"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/press/business-insider-dark.svg"><img src="docs/press/business-insider.svg" alt="Business Insider" height="32"></picture></a>
+  <em>Less job search. More signal qualification.</em>
 </p>
 
 ---
 
-<p align="center">
-  <img src="docs/demo.gif" alt="Career-Ops Demo" width="800">
-</p>
+## The Problem
 
-<p align="center"><strong>740+ job listings evaluated · 100+ personalized CVs · 1 dream role landed</strong></p>
+AI made applying to jobs easier.
 
-<p align="center">
-  <a href="https://warpchart.dev/hq">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://warpchart.dev/api/chart?theme=dark&v=3">
-      <img alt="Live star telemetry of santifer/career-ops" src="https://warpchart.dev/api/chart?theme=light&v=3" loading="lazy">
-    </picture>
-  </a>
-</p>
+That sounds useful until the whole market becomes noisier.
 
-<p align="center">
-  <a href="https://discord.gg/8pRpHETxa4"><img src="https://img.shields.io/badge/Join_the_community-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/santifer/career-ops/releases/latest"><img src="https://img.shields.io/npm/v/%40santifer%2Fcareer-ops?style=for-the-badge&labelColor=2b3137&color=2ea44f&label=release" alt="Latest release"></a>
-</p>
-
-<p align="center">
-  <a href="https://claude.com/claude-code"><img src="https://img.shields.io/badge/Built_with-Claude_Code-000?style=for-the-badge&logo=anthropic&logoColor=white" alt="Built with Claude Code"></a>
-</p>
-
-<p align="center">
-  <sub>Also runs on any agent-skill-standard CLI. See <a href="docs/SUPPORTED_CLIS.md">Supported CLIs</a>.</sub><br>
-  <img src="https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white" alt="Claude Code">
-  <img src="https://img.shields.io/badge/OpenCode-111827?style=flat&logo=terminal&logoColor=white" alt="OpenCode">
-  <img src="https://img.shields.io/badge/Antigravity_CLI-4285F4?style=flat&logo=google&logoColor=white" alt="Antigravity CLI">
-  <img src="https://img.shields.io/badge/Codex-412991?style=flat&logo=openai&logoColor=white" alt="Codex">
-  <img src="https://img.shields.io/badge/Qwen-615CED?style=flat" alt="Qwen">
-  <img src="https://img.shields.io/badge/Kimi-FF4B4B?style=flat" alt="Kimi">
-  <img src="https://img.shields.io/badge/GitHub_Copilot-000?style=flat&logo=githubcopilot&logoColor=white" alt="GitHub Copilot">
-  <img src="https://img.shields.io/badge/Grok_Build_CLI-000?style=flat&logo=x&logoColor=white" alt="Grok Build CLI">
-  <br>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go">
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white" alt="Playwright">
-  <img src="https://img.shields.io/badge/Bubble_Tea-FF75B5?style=flat&logo=go&logoColor=white" alt="Bubble Tea">
-  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT">
-  <a href="TRADEMARK.md"><img src="https://img.shields.io/badge/Trademark-Policy-blue.svg" alt="Trademark Policy"></a>
-</p>
-
-## What Is This
-
-Career-Ops ([career-ops.org](https://career-ops.org), also known as **careerops**) turns any AI coding CLI into a full job search command center. Instead of manually tracking applications in a spreadsheet, you get an AI-powered pipeline that:
-
-- **Evaluates offers** with a structured A-F scoring system (10 weighted dimensions)
-- **Generates tailored PDFs** -- ATS-optimized CVs customized per job description
-- **Scans portals** automatically (Greenhouse, Ashby, Lever, company pages)
-- **Processes in batch** -- evaluate 10+ offers in parallel with sub-agents
-- **Tracks everything** in a single source of truth with integrity checks
-- **Researches companies and finds the right person to contact** -- applications get you in the queue; research gets you a conversation
-
-> **Important: This is NOT a spray-and-pray tool.** Career-ops is a filter -- it helps you find the few offers worth your time out of hundreds. The system strongly recommends against applying to anything scoring below 4.0/5. Your time is valuable, and so is the recruiter's. Always review before submitting.
-
-Career-ops is agentic: whichever AI coding CLI you choose navigates career pages with Playwright, evaluates fit by reasoning about your CV vs the job description (not keyword matching), and adapts your resume per listing.
-
-> **Heads up: the first evaluations won't be great.** The system doesn't know you yet. Feed it context -- your CV, your career story, your proof points, your preferences, what you're good at, what you want to avoid. The more you nurture it, the better it gets. Think of it as onboarding a new recruiter: the first week they need to learn about you, then they become invaluable.
-
-Built by someone who used it to evaluate 740+ job offers, generate 100+ tailored CVs, and land a Head of Applied AI role. [Read the full case study](https://santifer.io/career-ops-system).
-
-## Features
-
-| Feature                  | Description                                                                                                                              |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **Auto-Pipeline**        | Paste a URL, get a full evaluation + PDF + tracker entry                                                                                 |
-| **6-Block Evaluation**   | Role summary, CV match, level strategy, comp research, personalization, interview prep (STAR+R) -- plus a Block G posting-legitimacy check that flags scams and ghost jobs |
-| **Interview Story Bank** | Accumulates STAR+Reflection stories across evaluations -- 5-10 master stories that answer any behavioral question                        |
-| **Negotiation Scripts**  | Salary negotiation frameworks, geographic discount pushback, competing offer leverage                                                    |
-| **ATS PDF Generation**   | Keyword-injected CVs with Space Grotesk + DM Sans design                                                                                 |
-| **Cover Letter Generator** | Research-backed cover letters with keyword mirroring, four interactive angle prompts (why/problems/approach/tone), draft-in-chat approval gate, and A4 PDF via the same HTML + Playwright pipeline as CVs. Auto-drafts on every evaluation; complete and generate on demand via `/career-ops cover` |
-| **Application Email Drafts** | Formal recruiter/referral/cold application emails from a report or pasted JD, with subject line, attachment checklist, source-backed fit points, and a profile-driven contact block. Draft-only -- career-ops never sends, submits, or clicks anything. |
-| **Portal Scanner**       | 45+ companies pre-configured (Anthropic, OpenAI, ElevenLabs, Retool, n8n...) + custom queries across Ashby, Greenhouse, Lever, Wellfound |
-| **Batch Processing**     | Parallel evaluation with headless CLI workers (`claude -p` / `opencode run`)                                                             |
-| **Dashboard TUI**        | Terminal UI to browse, filter, and sort your pipeline                                                                                    |
-| **Human-in-the-Loop**    | AI evaluates and recommends, you decide and act. The system never submits an application -- you always have the final call               |
-| **Pipeline Integrity**   | Automated merge, dedup, status normalization, health checks                                                                              |
-| **Beyond the CV**        | Company research ([`deep`](modes/deep.md)) surfaces AI strategy, recent moves, engineering culture, and the angle your profile should take. Contact discovery ([`contacto`](modes/contacto.md)) identifies the hiring manager, recruiter, or team peer worth reaching out to and drafts a ≤300-character LinkedIn message tuned to each contact type. Formal application email drafts ([`email`](modes/email.md)) turn an evaluated report or pasted JD into a subject line, body, and attachment checklist without sending, submitting, or clicking anything. Applications get you in the queue; research gets you a conversation. |
-
-## Quick Start
-
-**Fastest way — one command:**
-
-```bash
-npx @santifer/career-ops init
-```
-
-> 💡 `npx` ships with [Node.js](https://nodejs.org) — it runs the installer once,
-> without installing anything globally. No Node yet? Install it first.
-> (Already using a Claude Code / Gemini / Codex CLI? Then you already have it.)
-
-This clones the latest release into `./career-ops` and installs dependencies. Then:
-
-```bash
-cd career-ops
-claude   # or gemini / codex / qwen / opencode / agy / grok — open your AI CLI here
-```
-
-**On first launch, career-ops walks you through setup — your CV, profile and target roles — just by chatting. Nothing to edit by hand.**
-
-<details>
-<summary><b>Prefer to set it up manually? (git clone)</b></summary>
-
-```bash
-git clone https://github.com/santifer/career-ops.git
-cd career-ops && npm install
-npx playwright install chromium   # only needed for PDF generation
-
-# 2. Check setup
-npm run doctor                     # Validates all prerequisites
-
-# 3. Configure
-cp config/profile.example.yml config/profile.yml  # Edit with your details
-cp templates/portals.example.yml portals.yml       # Customize companies
-
-# 4. Add your CV
-# Create cv.md in the project root with your CV in markdown
-
-# 5. Open your AI CLI in this directory
-claude   # or codex / opencode / gemini / qwen / agy / grok
-
-# Then ask your CLI to adapt the system to you:
-# "Change the archetypes to backend engineering roles"
-# "Translate the modes to English"
-# "Add these 5 companies to portals.yml"
-# "Update my profile with this CV I'm pasting"
-
-# 6. Start using
-# Paste a job URL or JD text to trigger auto-pipeline
-# If your CLI supports slash commands, use /career-ops (or its CLI-specific alias)
-# In Codex, ask for the same mode in plain language, e.g.:
-# "Run the career-ops scan mode"
-# "Run the career-ops pipeline mode for data/pipeline.md"
-# "Run the career-ops pdf mode for the latest evaluated role"
-# "Run the career-ops tracker mode and summarize the current statuses"
-```
-
-</details>
-
-> **The system is designed to be customized by your AI coding CLI itself.** Modes, archetypes, scoring weights, negotiation scripts -- just ask it to change them. It reads the same files it uses, so it knows exactly what to edit.
-
-See [docs/SETUP.md](docs/SETUP.md) for the full setup guide, [docs/RUNNING_ON_A_BUDGET.md](docs/RUNNING_ON_A_BUDGET.md) for instructions on running career-ops cheaply using custom or local models, [docs/APPLY_AUTOFILL.md](docs/APPLY_AUTOFILL.md) for details on the ATS auto-fill flow, and [docs/FAQ.md](docs/FAQ.md) for answers to common setup questions.
-
-## Antigravity CLI Integration
-
-Career-ops supports Antigravity CLI natively, the same way it supports Claude Code and OpenCode. All slash commands are available through the shared skill entrypoint, using the same `modes/*.md` evaluation logic.
-
-Google has transitioned consumer Gemini CLI access to Antigravity CLI. `GEMINI.md` is now a no-op compatibility guard so Antigravity does not duplicate the full project instructions when it reads both `AGENTS.md` and `GEMINI.md`.
-
-### Native Antigravity CLI
-
-```bash
-# 1. Run in the career-ops directory
-cd career-ops
-agy
-
-# 2. Use the unified /career-ops command with subcommands:
-/career-ops "Senior AI Engineer at Anthropic..."
-/career-ops pipeline
-/career-ops scan
-/career-ops pdf
-/career-ops tracker
-```
-
-The skill is defined using the open standard in `.agents/skills/career-ops/SKILL.md` and symlinked/referenced for each supported CLI (e.g. `.claude/`, `.qwen/`, `.antigravitycli/`, `.grok/`).
-
-## Codex Integration
-
-Career-ops supports Codex through the same shared router, but the invocation model is different from CLIs that auto-register slash commands. For the full guide, see [docs/CODEX.md](docs/CODEX.md).
-
-### Interactive Codex
-
-```bash
-cd career-ops
-codex
-```
-
-Slash commands are not guaranteed in Codex. If `/career-ops` is unavailable, ask Codex to run the mode directly in plain language:
+Candidates can apply faster.  
+Companies receive more applications.  
+Job descriptions get packed with the same ambiguous words:
 
 ```text
-Evaluate this JD with career-ops auto-pipeline: https://company.com/jobs/123
-Run the career-ops scan mode and summarize new matches.
-Run the career-ops pipeline mode for data/pipeline.md.
-Run the career-ops pdf mode for the latest evaluated role.
-Run the career-ops tracker mode and summarize the current statuses.
+AI
+GTM
+Remote
+SaaS
+Platform
+Strategy
+Growth
+Product Marketing
 ```
 
-### One-shot Codex (`codex exec`)
+The result is not clarity.
 
-```bash
-codex exec "Evaluate this JD with career-ops auto-pipeline: https://company.com/jobs/123"
-codex exec "Run career-ops scan mode in this repo and summarize new matches."
-codex exec "Run career-ops pipeline mode for data/pipeline.md."
-codex exec "Run career-ops pdf mode for the latest evaluated role."
-codex exec "Run career-ops tracker mode and summarize the current statuses."
+The result is noise.
+
+Most job-search systems still work like keyword search. They find roles that contain the right words, then leave the real qualification work to the candidate.
+
+That is the wrong layer to automate.
+
+The hard part is no longer finding more roles.
+
+The hard part is deciding which roles are actually worth time.
+
+---
+
+## The Idea
+
+This project treats job discovery like a qualification pipeline.
+
+Instead of asking:
+
+```text
+Which jobs match my keywords?
 ```
 
-## Grok Build CLI Integration
+it asks:
 
-Career-ops supports Grok Build CLI natively, the same way it supports Claude Code and OpenCode. `AGENTS.md` is auto-loaded as project rules, and all slash commands are available through the shared skill entrypoint.
-
-### Native Grok Build CLI
-
-```bash
-# 1. Run in the career-ops directory
-cd career-ops
-grok
-
-# 2. Use the unified /career-ops command with subcommands:
-/career-ops "Senior AI Engineer at Anthropic..."
-/career-ops pipeline
-/career-ops scan
-/career-ops pdf
-/career-ops tracker
+```text
+Is this actually a PMM/GTM role?
+Is the location model real?
+Is it senior enough?
+Is the function strategic enough?
+Do I have evidence for this role?
+Should this move forward, wait, or be skipped?
 ```
 
-For headless batch workers, use `grok -p "prompt"` (add `--yolo` to auto-approve tool executions).
+The useful output is not:
 
-### Standalone Gemini API Script (No CLI install needed)
-
-```bash
-# 1. Get a free API key at https://aistudio.google.com/apikey
-cp .env.example .env
-# Edit .env, set GEMINI_API_KEY=your_key_here
-
-# 2. Install dependencies
-npm install
-
-# 3. Evaluate a job description
-node gemini-eval.mjs "We are looking for a Senior AI Engineer..."
-node gemini-eval.mjs --file ./jds/my-job.txt
-node agent-inbox.mjs add "..."   # queue a request for the next session
-npm run gemini:eval -- "JD text here"
+```text
+Here are 50 more jobs.
 ```
 
-> **Free tier:** Both options work without billing. Native CLI uses Google OAuth; the API script uses `gemini-2.5-flash` (15 RPM, 1M tokens/day free).
+The useful output is:
 
-## Usage
-
-Career-ops uses a shared command router. In CLIs that register slash commands, it looks like this:
-
-```
-/career-ops                → Show all available commands
-/career-ops {paste a JD}   → Full auto-pipeline (evaluate + PDF + tracker)
-/career-ops scan           → Scan portals for new offers
-/career-ops pdf            → Generate ATS-optimized CV
-/career-ops cover          → Cover letter generator (paste JD or /career-ops cover {slug})
-/career-ops email          → Formal application email draft (draft-only; never sends, submits, or clicks)
-/career-ops batch          → Batch evaluate multiple offers
-/career-ops tracker        → View application status
-/career-ops apply          → Fill application forms with AI
-/career-ops pipeline       → Process pending URLs
-/career-ops contacto       → Find hiring manager / recruiter / peer + draft a ≤300-char LinkedIn message per contact type
-/career-ops deep           → Generate a structured 6-axis research prompt (AI strategy, recent moves, culture, challenges, competitors, candidate angle)
-/career-ops training       → Evaluate a course/cert
-/career-ops project        → Evaluate a portfolio project
+```text
+This role looked relevant by title, but it is not worth your time.
 ```
 
-Or just paste a job URL or description directly -- career-ops auto-detects it and runs the full pipeline.
+That is the product idea.
 
-In Codex, slash commands are not guaranteed. Use the same mode names in a prompt instead, or call them from `codex exec`.
+A career workflow should not simply increase application volume.
+
+It should improve decision quality.
+
+---
+
+## Positioning
+
+**PMM/GTM Career Intelligence Pipeline** is a private, configurable operating system for role qualification.
+
+It is designed for Product Marketing and Go-to-Market professionals who want to separate real opportunities from noisy listings before investing time in applications, CV tailoring, recruiter outreach, or interview preparation.
+
+It helps answer:
+
+| Question | Why it matters |
+|---|---|
+| Is this actually PMM/GTM? | Many “GTM” roles are RevOps, sales ops, systems, finance, or field operations. |
+| Is the role location-compatible? | “Remote” can mean global, EMEA, Europe-only, US-only, or hybrid. |
+| Is the role senior enough? | Title inflation and vague levels waste time. |
+| Is the role strategic or execution-heavy? | Some “PMM” roles are mostly content production. |
+| Is there real evidence for fit? | Applications are stronger when grounded in proof points, not generic claims. |
+| Should this be apply, maybe, or skip? | A clear skip is often more valuable than another weak lead. |
+
+---
+
+## One-Line Value Proposition
+
+> **A signal qualification layer for PMM/GTM job discovery.**
+
+---
+
+## What This Is Not
+
+This is not a mass-apply bot.
+
+It does not submit applications automatically.  
+It does not spam recruiters.  
+It does not invent experience.  
+It does not optimize for “more applications sent.”  
+
+The system is designed to keep the human in control.
+
+It improves the quality of the decision before the human acts.
+
+---
 
 ## How It Works
 
-```
-You paste a job URL or description
-        │
-        ▼
-┌──────────────────┐
-│  Archetype       │  Classifies: LLMOps / Agentic / PM / SA / FDE / Transformation
-│  Detection       │
-└────────┬─────────┘
-         │
-┌────────▼─────────┐
-│  A-F Evaluation  │  Match, gaps, comp research, STAR stories
-│  (reads cv.md)   │
-└────────┬─────────┘
-         │
-    ┌────┼────┐
-    ▼    ▼    ▼
- Report  PDF  Tracker
-  .md   .pdf   .tsv
+```mermaid
+flowchart TD
+    A[Curated Job Sources] --> B[Source Ingestion]
+    B --> C[Role Normalization]
+    C --> D[PMM/GTM Title Filter]
+    D --> E[False Positive Filter]
+    E --> F[Location Compatibility Filter]
+    F --> G[Private Opportunity Pipeline]
+    G --> H[Full JD Fetch]
+    H --> I[Candidate Context Evaluation]
+    I --> J[Fit Report]
+    J --> K{Decision}
+    K -->|Apply| L[Application Angle]
+    K -->|Maybe| M[Manual Review]
+    K -->|Skip| N[Reasoned Rejection]
 ```
 
-## Pre-configured Portals
+The pipeline starts with curated sources: company career pages, ATS pages, job boards, and manually added job descriptions.
 
-The scanner comes with **45+ companies** ready to scan and **19 search queries** across major job boards. Copy `templates/portals.example.yml` to `portals.yml` and add your own:
+It then filters for PMM/GTM relevance, removes common false positives, checks location compatibility, and evaluates the full job description against a private candidate context layer.
 
-**AI Labs:** Anthropic, OpenAI, Mistral, Cohere, LangChain, Pinecone
-**Voice AI:** ElevenLabs, PolyAI, Parloa, Hume AI, Deepgram, Vapi, Bland AI
-**AI Platforms:** Retool, Airtable, Vercel, Temporal, Glean, Arize AI
-**Contact Center:** Ada, LivePerson, Sierra, Decagon, Talkdesk, Genesys
-**Enterprise:** Salesforce, Twilio, Gong, Dialpad
-**LLMOps:** Langfuse, Weights & Biases, Lindy, Cognigy, Speechmatics
-**Automation:** n8n, Zapier, Make.com
-**European:** Factorial, Attio, Tinybird, Clarity AI, Travelperk
+The output is a structured recommendation.
 
-**Job boards searched:** 21 provider modules cover ATS APIs, board-wide feeds, XML/RSS feeds, markdown feeds, and local parsers. See [Supported job boards](docs/SUPPORTED_JOB_BOARDS.md) for the full table.
+Not a generic summary.
 
-By default `node scan.mjs` (a.k.a. `npm run scan`) trusts what each ATS feed returns. Some companies leave stale postings in their public API even after the role is closed, so those expired entries can leak into `pipeline.md`. Pass `--verify` to launch Playwright after the API pass and drop expired postings before they hit the pipeline:
+---
+
+## The Marketing View
+
+Think of the system as a funnel.
+
+```mermaid
+flowchart LR
+    A[Many Job Listings] --> B[Relevant Titles]
+    B --> C[Location Compatible]
+    C --> D[Functionally PMM/GTM]
+    D --> E[Evidence Supported]
+    E --> F[Worth Human Time]
+```
+
+Most job tools optimize the top of the funnel.
+
+This one optimizes the middle.
+
+It is not built to maximize the number of roles seen.
+
+It is built to reduce the number of bad decisions.
+
+---
+
+## Why PMM/GTM Needs This
+
+Product Marketing and Go-to-Market roles are unusually noisy because the titles overlap with many other functions.
+
+“GTM” can mean:
+
+- Product Marketing
+- RevOps
+- Sales Operations
+- GTM Systems
+- Strategic Finance
+- Field Marketing
+- Growth
+- Sales Enablement
+- Revenue Strategy
+- Partnerships
+- Business Operations
+
+“Product Marketing” can mean:
+
+- Positioning and messaging
+- Launch strategy
+- Competitive intelligence
+- Sales enablement
+- Technical narrative
+- Market research
+- Content production
+- Demand generation support
+- Customer marketing
+- Partner marketing
+
+A generic job-search workflow cannot reliably tell the difference.
+
+This pipeline is built around those distinctions.
+
+---
+
+## Target Users
+
+This adaptation is designed for people working around:
+
+- Product Marketing
+- Technical Product Marketing
+- Platform Marketing
+- AI Product Marketing
+- Go-to-Market Strategy
+- Sales Enablement
+- Competitive Intelligence
+- Partner Marketing
+- Marketplace Marketing
+- Vertical / Industry Marketing
+- B2B SaaS and enterprise software GTM
+
+The strongest use case is a senior candidate who does not need “more jobs,” but needs a better way to sort signal from noise.
+
+---
+
+## Target Role Families
+
+| Core PMM/GTM Roles | Adjacent Roles Worth Reviewing |
+|---|---|
+| Product Marketing Manager | Sales Enablement Manager |
+| Senior Product Marketing Manager | Revenue Enablement Manager |
+| Principal Product Marketing Manager | Competitive Intelligence Manager |
+| Director of Product Marketing | Market Intelligence Manager |
+| Head of Product Marketing | Partner Marketing Manager |
+| Technical Product Marketing Manager | Marketplace Marketing Manager |
+| Platform Product Marketing Manager | Vertical Marketing Manager |
+| AI Product Marketing Manager | Industry Marketing Manager |
+| GTM Manager | Solutions Marketing Manager |
+| Go-to-Market Manager | Product Launch Manager |
+
+The system can evaluate adjacent roles, but it should remain strict about whether the work is truly close to PMM/GTM.
+
+---
+
+## False Positives It Is Designed to Catch
+
+A large part of the value is rejecting roles that contain the right words but represent the wrong function.
+
+| Looks relevant because... | But may actually be... |
+|---|---|
+| “GTM” | RevOps, sales ops, GTM systems, strategic finance |
+| “Growth” | Paid media, lifecycle, CRM, demand generation |
+| “Platform” | Engineering, developer relations, infrastructure |
+| “AI” | Generic SaaS with AI messaging added later |
+| “Enablement” | Sales training, onboarding, documentation-only work |
+| “Product Marketing” | Content production with a PMM title |
+
+Common downgrade or reject categories:
+
+- GTM Engineer
+- GTM Systems
+- Strategic Finance
+- RevOps
+- Sales Operations
+- SDR / BDR / AE
+- Recruiting / Talent Acquisition
+- Content-only marketing
+- Social media marketing
+- Brand-only marketing
+- Event coordination
+- Customer Success
+- Implementation
+- Project Management
+- Developer Advocate / DevRel
+- Software Engineering
+- Junior or intern roles
+- Pure demand generation
+- Paid media
+- SEO-only roles
+- CRM/lifecycle-only roles
+
+These are not bad jobs.
+
+They are simply not the target jobs.
+
+---
+
+## Location Qualification
+
+Location is treated as a core qualification layer, not a detail.
+
+The pipeline is tuned for roles compatible with:
+
+```text
+Europe
+EMEA
+CET
+GMT
+UK
+Ireland
+Germany
+Netherlands
+France
+Spain
+Portugal
+Italy
+Romania
+Poland
+Czech Republic
+Nordics
+DACH
+Benelux
+EU
+Remote Europe
+Remote EMEA
+Global remote
+±2 hours CET
+```
+
+The system should distinguish between:
+
+| Location phrase | Interpretation needed |
+|---|---|
+| Remote | Remote where? |
+| Remote Europe | Likely compatible |
+| Remote EMEA | Likely compatible |
+| Remote US | Usually not compatible |
+| Hybrid | Requires city-level review |
+| Flexible | Often means office-first |
+| Global remote | Strong positive signal |
+| Work authorization required | Needs manual review |
+
+A job can pass the title filter and still fail because the location model is wrong.
+
+That is expected behavior.
+
+---
+
+## Evaluation Layer
+
+The evaluation should behave less like a summarizer and more like a PMM/GTM reviewer.
+
+A useful evaluation answers:
+
+- What is the real function of this role?
+- Is it actually PMM/GTM?
+- Is it closer to product marketing, sales enablement, partner marketing, field marketing, growth, or operations?
+- Is the company category relevant?
+- Is the role senior enough?
+- Is it strategic or mostly executional?
+- Does the JD require technical fluency?
+- Does it require vertical expertise?
+- Does it require platform, ecosystem, marketplace, AI, or enterprise SaaS experience?
+- Is there evidence in the candidate profile to support the match?
+- What proof points should be used?
+- What are the risk flags?
+- What is missing?
+- Should the role be apply, maybe, or skip?
+
+The output should be a decision aid.
+
+Not a motivational paragraph.
+
+---
+
+## Recommended Report Format
+
+```yaml
+role_title:
+company:
+source_url:
+location_model:
+role_family:
+seniority:
+company_category:
+function_fit:
+location_fit:
+evidence_match:
+risk_flags:
+missing_proof:
+fit_score:
+recommendation:
+application_angle:
+recruiter_message_angle:
+interview_prep_notes:
+next_action:
+```
+
+Decision values:
+
+```text
+apply
+maybe
+skip
+```
+
+A good `skip` is a valid success state.
+
+---
+
+## Example Recommendations
+
+### Apply
+
+```yaml
+recommendation: apply
+reason: >
+  The role is a clear PMM/GTM fit, location-compatible, senior enough,
+  and strongly supported by existing proof points. The JD emphasizes
+  positioning, launches, enablement, competitive intelligence, and
+  enterprise SaaS GTM.
+```
+
+### Maybe
+
+```yaml
+recommendation: maybe
+reason: >
+  The role is adjacent to PMM but may lean toward field marketing or
+  revenue marketing. Location appears compatible, but the responsibilities
+  require manual review before investing time.
+```
+
+### Skip
+
+```yaml
+recommendation: skip
+reason: >
+  The title contains GTM, but the role is functionally RevOps.
+  Responsibilities focus on CRM architecture, revenue process,
+  pipeline operations, and sales systems rather than positioning,
+  launches, enablement, or product narrative.
+```
+
+---
+
+## Scoring Philosophy
+
+The pipeline optimizes for rejection quality.
+
+A role should not move forward only because it contains the right keywords.
+
+It should move forward because the title, company context, location model, seniority, responsibilities, and candidate evidence create a credible match.
+
+| Dimension | What it checks |
+|---|---|
+| `role_relevance` | Is this actually PMM/GTM? |
+| `location_compatibility` | Can the candidate realistically work this role? |
+| `seniority_match` | Is the level aligned? |
+| `company_category_fit` | Is the company category relevant? |
+| `technical_pmm_fit` | Does the role need technical product fluency? |
+| `gtm_scope` | Is the scope strategic enough? |
+| `evidence_strength` | Is there proof behind the fit? |
+| `risk_level` | What could make this a bad use of time? |
+| `application_effort` | How expensive is the application motion? |
+| `expected_upside` | Is the upside worth the effort? |
+
+The score is not truth.
+
+It is a forcing function for better judgment.
+
+---
+
+## Architecture
+
+The system separates reusable workflow logic from private candidate data.
+
+```mermaid
+flowchart LR
+    subgraph Public Repo Layer
+        A[Scanner Logic]
+        B[Evaluation Modes]
+        C[Templates]
+        D[Source Definitions]
+        E[Example Config]
+        F[Documentation]
+        G[Generic Prompts]
+        H[Dashboard Code]
+    end
+
+    subgraph Private Local Layer
+        I[CV / Resume]
+        J[Candidate Profile]
+        K[Proof Points]
+        L[Private Target Companies]
+        M[Private Portals Config]
+        N[Scan History]
+        O[Fit Reports]
+        P[Application Tracker]
+        Q[Interview Notes]
+        R[Generated Drafts]
+        S[API Keys / Tokens / .env]
+    end
+
+    A --> M
+    B --> J
+    B --> K
+    C --> R
+    H --> P
+```
+
+The reusable system can be public.
+
+The candidate evidence layer should remain private.
+
+---
+
+## Public / Private Boundary
+
+### Good Public Content
+
+- workflow logic
+- generic PMM/GTM filtering rules
+- example configuration
+- fake example reports
+- generic templates
+- scanner architecture
+- documentation
+- privacy model
+- setup instructions
+
+### Private Content That Should Not Be Committed
+
+- real CV
+- real resume
+- personal profile
+- proof points
+- scan history
+- fit reports
+- real application tracker
+- generated application drafts
+- recruiter messages
+- private target lists
+- personal career strategy
+- saved job descriptions for private evaluation
+- interview preparation notes
+- credentials
+- API keys
+- tokens
+- `.env` files
+
+Before making the repository public, inspect both the working tree and Git history.
+
+Removing a private file from the latest commit is not enough if it already exists in previous commits.
+
+---
+
+## Suggested `.gitignore`
+
+```gitignore
+# Private candidate data
+cv.md
+resume.md
+*.resume.pdf
+*Resume*
+*CV*
+
+# Private profile and proof points
+config/profile.yml
+config/private*.yml
+profile.yml
+proof-points.md
+article-digest.md
+
+# Private source configuration
+portals.yml
+private-portals.yml
+target-companies.yml
+
+# Runtime data
+data/
+reports/
+output/
+jds/
+interview-prep/
+applications/
+scan-history/
+
+# Generated drafts
+drafts/
+cover-letters/
+recruiter-messages/
+
+# Environment and secrets
+.env
+.env.*
+*.key
+*.pem
+*.token
+secrets.*
+```
+
+Verify what Git is tracking:
 
 ```bash
-node scan.mjs --verify          # zero-token discovery + Playwright liveness check
+git status
+git ls-files | grep -Ei "resume|cv|profile|proof|application|report|token|secret|env|key|jd|interview|pipeline|draft"
 ```
 
-The verification is sequential and only runs against new offers (after dedup), so the cost stays bounded.
-
-## Dashboard TUI
-
-The built-in terminal dashboard lets you browse your pipeline visually:
+If sensitive files appear in `git ls-files`, remove them from tracking:
 
 ```bash
-npm run serve:dashboard   # launch the TUI
-npm run build:dashboard   # optional: build the standalone binary
+git rm --cached path/to/private-file
 ```
 
-Features: 6 filter tabs, 4 sort modes, grouped/flat view, lazy-loaded previews, inline status changes.
+If sensitive files were committed historically, clean Git history before making the repo public.
 
-There is also an **experimental web UI** (alpha, opt-in — nothing runs unless you start it): see [`web/README.md`](web/README.md).
+---
 
-## Project Structure
+## Capabilities
 
+- Config-driven job source scanning
+- Company career page ingestion
+- Job board ingestion
+- ATS source parsing
+- PMM/GTM title filtering
+- Adjacent title expansion
+- Negative keyword filtering
+- False-positive rejection
+- Location compatibility filtering
+- Company category tagging
+- Full job description fetching
+- Candidate-profile-based evaluation
+- Fit scoring
+- Recommendation reports
+- Local opportunity tracking
+- Dry-run mode for testing
+- Dashboard or tracker view
+- Human-reviewed application material generation
+- Public workflow logic separated from private data
+
+---
+
+## Source Categories
+
+| Category | Why it matters |
+|---|---|
+| AI-native / LLM / agentic AI | Strong fit for AI PMM, platform PMM, technical narrative |
+| Developer tools and infrastructure | Useful for technical PMM and platform positioning |
+| Enterprise SaaS | Core PMM, launch, enablement, competitive intelligence |
+| CRM / RevTech / Sales technology | GTM, sales enablement, buyer journey, revenue tooling |
+| Automation and workflow orchestration | Strong fit for AI agents, RPA, orchestration, process automation |
+| Data, analytics, BI, and MLOps | Technical narrative, data products, platform GTM |
+| Cybersecurity and identity | Enterprise buyers, trust narratives, risk positioning |
+| Fintech infrastructure | Regulated software, B2B platform GTM |
+| Vertical SaaS | Industry-specific positioning and segment GTM |
+| Marketplaces and platform businesses | Ecosystem strategy, supply/demand dynamics, marketplace GTM |
+| Collaboration and productivity | Adoption, PLG, workflow narratives |
+| Contact center and CX software | Automation, voice AI, conversational AI, service operations |
+
+The point is not to scan the whole internet.
+
+The point is to scan a curated universe where relevant PMM/GTM roles are more likely to appear.
+
+---
+
+## Example Filtering Logic
+
+A role may enter the pipeline if it contains strong target signals:
+
+```text
+Product Marketing Manager
+Senior Product Marketing Manager
+Technical Product Marketing
+Platform Product Marketing
+AI Product Marketing
+Partner Marketing
+Marketplace Marketing
+Competitive Intelligence
+Sales Enablement
+GTM Manager
+Go-to-Market Manager
+Product Launch
+Solutions Marketing
+Vertical Marketing
+Industry Marketing
 ```
-career-ops/
-├── AGENTS.md                    # Canonical agent instructions (all CLIs)
-├── CLAUDE.md                    # Claude Code wrapper (imports AGENTS.md)
-├── CODEX.md                     # Codex wrapper (imports AGENTS.md)
-├── OPENCODE.md                  # OpenCode wrapper (imports AGENTS.md)
-├── GEMINI.md                    # Legacy no-op guard to avoid Antigravity duplicate context
-├── cv.md                        # Your CV (create this)
-├── article-digest.md            # Your proof points (optional)
-├── config/
-│   └── profile.example.yml      # Template for your profile
-├── modes/                       # Skill modes
-│   ├── _shared.md               # Shared context (customize this)
-│   ├── oferta.md                # Single evaluation
-│   ├── pdf.md                   # PDF generation
-│   ├── cover.md                 # Cover letter generation
-│   ├── email.md                 # Formal application email drafts
-│   ├── scan.md                  # Portal scanner
-│   ├── batch.md                 # Batch processing
-│   └── ...
-├── templates/
-│   ├── cv-template.html         # ATS-optimized CV template
-│   ├── portals.example.yml      # Scanner config template
-│   └── states.yml               # Canonical statuses
-├── batch/
-│   ├── batch-prompt.md          # Self-contained worker prompt
-│   └── batch-runner.sh          # Orchestrator script
-├── dashboard/                   # Go TUI pipeline viewer
-├── data/                        # Your tracking data (gitignored)
-├── reports/                     # Evaluation reports (gitignored)
-├── output/                      # Generated PDFs (gitignored)
-├── fonts/                       # Space Grotesk + DM Sans
-├── docs/                        # Setup, customization, budget guide, architecture
-└── examples/                    # Sample CV, report, proof points
+
+A role may be rejected or downgraded if it contains strong negative signals:
+
+```text
+SDR
+BDR
+Account Executive
+RevOps
+Sales Operations
+Strategic Finance
+GTM Systems
+Engineer
+Developer Advocate
+DevRel
+Recruiter
+Content Writer
+Social Media
+Event Coordinator
+Customer Success
+Implementation
+Project Manager
+Intern
+Junior
 ```
 
-## Tech Stack
+### Example: Reject
 
-![Claude Code](https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
-![Bubble Tea](https://img.shields.io/badge/Bubble_Tea-FF75B5?style=flat&logo=go&logoColor=white)
+```yaml
+title: GTM Manager
+description: Owns pricing models, revenue forecasting, CRM architecture, and sales territory planning.
+decision: likely RevOps / GTM Ops, not PMM
+```
 
-- **Agent**: AI coding CLI with shared skills and modes (`AGENTS.md` + CLI wrapper)
-- **PDF**: Playwright/Puppeteer + HTML template
-- **Cover letters**: HTML template + Playwright (A4 PDF, same pipeline as CVs)
-- **Scanner**: Playwright + Greenhouse API + WebSearch
-- **Dashboard**: Go + Bubble Tea + Lipgloss (Catppuccin Mocha theme)
-- **Data**: Markdown tables + YAML config + TSV batch files
+### Example: Accept
 
-## Also Open Source
+```yaml
+title: Product Marketing Manager
+description: Owns positioning, launches, sales enablement, competitive intelligence, and platform narrative.
+decision: strong PMM fit
+```
 
-- **[cv-santiago](https://github.com/santifer/cv-santiago)** -- The portfolio website (santifer.io) with AI chatbot, LLMOps dashboard, and case studies. If you need a portfolio to showcase alongside your job search, fork it and make it yours.
+---
 
-## About the Author
+## Human-in-the-Loop Rules
 
-I'm Santiago -- Head of Applied AI, former founder (built and sold a business that still runs with my name on it). I built career-ops to manage my own job search. It worked: I used it to land my current role.
+### The system should not:
 
-My portfolio and other open source projects → [santifer.io](https://santifer.io)
+- auto-submit job applications
+- auto-send recruiter messages
+- auto-fill final application forms without review
+- invent candidate experience
+- exaggerate proof points
+- bypass job board or ATS terms
+- spam employers
+- optimize for application volume
 
-## Disclaimer
+### The system should:
 
-**career-ops is a local, open-source tool, NOT a hosted service.** By using this software, you acknowledge:
+- summarize roles
+- identify fit and mismatch
+- surface proof points
+- draft materials for review
+- recommend next actions
+- maintain a clear pipeline
+- make skip decisions explicit
 
-1. **You control your data.** Your CV, contact info, and personal data stay on your machine and are sent directly to the AI provider you choose (Anthropic, OpenAI, etc.). We do not collect, store, or have access to any of your data.
-2. **You control the AI.** The default prompts instruct the AI not to auto-submit applications, but AI models can behave unpredictably. If you modify the prompts or use different models, you do so at your own risk. **Always review AI-generated content for accuracy before submitting.**
-3. **You comply with third-party ToS.** You must use this tool in accordance with the Terms of Service of the career portals you interact with (Greenhouse, Lever, Workday, LinkedIn, etc.). Do not use this tool to spam employers or overwhelm ATS systems.
-4. **No guarantees.** Evaluations are recommendations, not truth. AI models may hallucinate skills or experience. The authors are not liable for employment outcomes, rejected applications, account restrictions, or any other consequences.
+---
 
-See [LEGAL_DISCLAIMER.md](LEGAL_DISCLAIMER.md) for full details. This software is provided under the [MIT License](LICENSE) "as is", without warranty of any kind.
+## Setup
 
-## Contributors
+Install dependencies:
 
-<a href="https://github.com/santifer/career-ops/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=santifer/career-ops" />
-</a>
+```bash
+npm install
+```
 
-Got hired using career-ops? [Share your story!](https://github.com/santifer/career-ops/issues/new?template=i-got-hired.yml)
+Install browser dependencies if PDF generation, browser verification, or Playwright-based flows are used:
 
-## License & Trademark
+```bash
+npx playwright install chromium
+```
 
-The code is licensed under [MIT](LICENSE). The "career-ops" name and
-brand are governed by the [Trademark Policy](TRADEMARK.md), permissive
-for community use, reserved for commercial product naming and
-endorsement.
+Copy example configuration files:
 
-## Let's Connect
+```bash
+cp config/profile.example.yml config/profile.yml
+cp templates/portals.example.yml portals.yml
+```
 
-[![Website](https://img.shields.io/badge/santifer.io-000?style=for-the-badge&logo=safari&logoColor=white)](https://santifer.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santifer)
-[![X](https://img.shields.io/badge/X-000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/santifer)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/8pRpHETxa4)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hi@santifer.io)
+Customize local private files as needed.
+
+Do not commit private candidate data.
+
+---
+
+## Running a Scan
+
+Run the scanner:
+
+```bash
+npm run scan
+```
+
+or directly:
+
+```bash
+node scan.mjs
+```
+
+Use dry-run or verification options when available:
+
+```bash
+node scan.mjs --dry-run
+node scan.mjs --verify
+```
+
+A good scan is not necessarily one that returns the most roles.
+
+A good scan returns fewer weak matches and more credible candidates for evaluation.
+
+---
+
+## Evaluating a Role
+
+Evaluate a role by pasting a job URL or full job description into the supported AI coding CLI and asking it to run the PMM/GTM career evaluation workflow.
+
+```text
+Evaluate this PMM/GTM role:
+
+[paste job description or URL]
+```
+
+The output should be a structured recommendation, not a generic summary.
+
+A strong evaluation should include:
+
+```text
+role summary
+function classification
+location compatibility
+seniority match
+evidence match
+risks
+missing proof
+fit score
+apply / maybe / skip recommendation
+application angle
+next action
+```
+
+---
+
+## Dashboard / Tracker
+
+The local tracker should help answer:
+
+- What roles are new?
+- What roles are pending evaluation?
+- What roles were skipped?
+- Why were they skipped?
+- Which roles are worth applying to?
+- Which applications are in progress?
+- Which roles need follow-up?
+- Which companies keep producing relevant opportunities?
+- Which sources generate noise?
+
+The tracker should make the pipeline easier to reason about, not just larger.
+
+---
+
+## Roadmap
+
+```mermaid
+flowchart TD
+    A[PMM/GTM Archetype Scoring] --> B[Role-Family Classifier]
+    B --> C[Company Category Classifier]
+    C --> D[Location Compatibility Model]
+    D --> E[Seniority Calibration]
+    E --> F[False-Positive Detection]
+    F --> G[Private Proof-Point Matching]
+    G --> H[Recruiter Message Drafting]
+    H --> I[Interview Preparation Mode]
+    I --> J[Role Comparison Reports]
+    J --> K[Pipeline Analytics]
+    K --> L[Exportable Fit Reports]
+    L --> M[Dashboard Improvements]
+    M --> N[Cleaner Public/Private Repo Separation]
+```
+
+Possible improvements:
+
+- Stronger PMM/GTM archetype scoring
+- Role-family classifier
+- Company category classifier
+- Better location compatibility model
+- Seniority calibration
+- False-positive detection improvements
+- Private proof-point matching
+- Recruiter message drafting
+- Interview preparation mode
+- Role comparison reports
+- Pipeline analytics
+- Current month vs previous month reporting
+- Exportable fit reports
+- Dashboard improvements
+- Cleaner public/private repo separation
+- Safer onboarding flow for private candidate data
+
+---
+
+## Technical Positioning
+
+This project is best understood as a small operating system for career qualification.
+
+It combines:
+
+```text
+source ingestion
+filtering logic
+candidate context
+role evaluation
+fit scoring
+pipeline tracking
+human review
+```
+
+The technical point is not automation for its own sake.
+
+The technical point is structured judgment.
+
+```text
+Volume is cheap.
+Signal quality is not.
+```
+
+---
+
+## Suggested Hero Image
+
+For a public GitHub README, avoid generic “AI robot” visuals.
+
+A better visual direction would be a simple product-style architecture diagram:
+
+```text
+Noisy job market
+    ↓
+PMM/GTM qualification engine
+    ↓
+Apply / Maybe / Skip
+```
+
+This can be added later as:
+
+```markdown
+<p align="center">
+  <img src="docs/pmm-gtm-pipeline-hero.png" alt="PMM/GTM Career Intelligence Pipeline" width="850">
+</p>
+```
+
+Keep the image inside the repo under `docs/` so the README stays stable.
+
+---
+
+## Attribution
+
+This repository is adapted from the original Career-Ops project by Santiago.
+
+Original project: `santifer/career-ops`
+
+This fork changes the positioning and configuration toward PMM/GTM role qualification, signal filtering, location compatibility, false-positive rejection, and private candidate-context evaluation.
+
+Please review and preserve the applicable upstream license and trademark requirements before redistributing or presenting this fork publicly.
+
+---
+
+## License
+
+Based on the upstream Career-Ops project.
+
+See the repository license for terms.
